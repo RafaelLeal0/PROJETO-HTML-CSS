@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O que é CSS?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Página Inicial</a></li>
+            <li><a href="html.html">HTML</a></li>
+            <li><a href="css.html">CSS</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>O que é CSS?</h1>
+        <section>
+            <h2>Introdução ao CSS</h2>
+            <p>CSS é uma linguagem de estilo utilizada para definir a aparência e o layout de páginas da web. Ela separa o conteúdo da apresentação, permitindo que os desenvolvedores apliquem estilos como cores, fontes, espaçamentos, tamanhos e layouts ao conteúdo estruturado pelo HTML. O CSS torna as páginas da web visualmente atraentes e facilita a manutenção e a consistência do design em todo o site.</p>
+        </section>
+        <section>
+            <h2>Conceitos Básicos</h2>
+            <h3>Seletores</h3>
+            <p>Seletores são usados para "selecionar" os elementos HTML que você deseja estilizar.</p>
+            <ul>
+                <li>O seletor de tag, também conhecido como seletor de elemento, é usado para selecionar todos os elementos de um tipo específico na página. Ele é definido pelo nome da tag HTML diretamente no CSS. Por exemplo, se você deseja estilizar todos os elementos < p > (parágrafos) na sua página, você usaria o seletor de tag p.</li><br>
+                <li>O seletor de classe é usado para selecionar todos os elementos que possuem uma classe específica. As classes são definidas com um ponto . seguido pelo nome da classe no CSS. Esse seletor permite aplicar estilos a um grupo de elementos, independentemente do seu tipo. Por exemplo, se você deseja estilizar todos os elementos com a classe destacado, você usaria . destacado no CSS.</li><br>
+                <li>O seletor de ID é usado para selecionar um elemento específico que possui um identificador único. Os IDs são definidos com uma cerquilha # seguida pelo nome do ID no CSS. Como um ID deve ser único em uma página, o seletor de ID é usado para aplicar estilos a um único elemento específico. Por exemplo, para estilizar um elemento com o ID cabeça, você usaria #cabeça no CSS.</li><br>
+            </ul>
+            <h3>Propriedades e Valores</h3>
+            <p>As propriedades em CSS são os aspectos específicos dos elementos HTML que podem ser estilizados. Elas definem o que será modificado em um elemento, como cor, fonte, espaçamento, layout, entre outros. Cada propriedade tem um conjunto de valores possíveis que determinam como a modificação será aplicada.</p>
+            <p>Os valores em CSS especificam a configuração desejada para a propriedade aplicada. Cada propriedade aceita um ou mais tipos de valores, como números, palavras-chave, comprimentos, cores, URLs, entre outros. A combinação de propriedades e valores permite a criação de estilos detalhados e complexos para elementos HTML.</p>
+            <h3>Classes e IDs</h3>
+            <p>Classes são seletores em CSS usados para aplicar estilos a um grupo de elementos. Eles são definidos com um ponto (.) seguido por um nome de classe e são usados para compartilhar estilos entre vários elementos, permitindo uma maior reutilização de código e consistência no design. As classes são particularmente úteis quando se deseja aplicar o mesmo estilo a diferentes tipos de elementos em um documento HTML.</p>
+            <p>IDs são seletores em CSS usados para identificar um único elemento na página. Eles são definidos com um símbolo de cerquilha (#) seguido por um nome de ID e devem ser únicos dentro de um documento HTML. Os IDs têm uma especificidade maior em comparação com classes, o que significa que as regras de estilo associadas a IDs prevalecem sobre as regras de classes quando há conflitos.</p>
+            <h3>Cascata e Especificidade</h3>
+            <p>A cascata em CSS refere-se ao mecanismo pelo qual o navegador aplica as regras de estilo a elementos HTML quando há múltiplas regras em conflito. Esse processo é baseado em três princípios fundamentais: origem da folha de estilo, especificidade e ordem de aparição</p>
+        </section>
+        <section>
+            <h2>Exemplo Prático</h2>
+            <p>Abaixo está um exemplo prático usando seletores de tag, classe e ID:</p>
+            <p>Este é um parágrafo.</p>
+            <p class="destacado">Este parágrafo é destacado.</p>
+            <p class="destacado">Outro parágrafo destacado.</p>
+            <p id="especial">Este é um parágrafo especial.</p>
+            <p id="perso">Texto com cor personalizada.</p>
+            <p id="font">Texto com fonte personalizada.</p>
+            <p class="info">Informação importante.</p>
+            <p id="notificacao">Mensagem importante.</p>
+            <p class="texto" id="importante">Texto com estilo conflitante.</p>
+            <style>
+                p {
+                    color: black;
+                }
+
+                .texto {
+                    color: gray;
+                }
+
+                #importante {
+                color: red;
+                }
+                #notificacao {
+                    background-color: lightblue;
+                    padding: 15px;
+                }
+                .info {
+                    border: 1px solid black;
+                    padding: 10px;
+                }
+                #font {
+                    font-family: 'Arial', sans-serif; /* Propriedade: font-family | Valor: 'Arial', sans-serif */
+                }
+                #perso {
+                    color: green; /* Propriedade: color | Valor: green */
+                }   
+
+                h2 {
+                    color: blue;
+                }
+                .paragrafo {
+                    font-size: 16px;
+                }
+                #especial {
+                    background-color: yellow;
+                }
+            </style>
+        </section>
+    </main>
+</body>
+</html>
